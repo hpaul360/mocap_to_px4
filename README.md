@@ -57,4 +57,4 @@ This software is released under the MIT License. See the [LICENSE](LICENSE) file
 - Report any issues or contribute to the development of this package on [GitHub](https://github.com/hpaul360/mocap_to_px4).
 
 ## Contact
-- For questions or further assistance, feel free to contact the author.
+- For questions or further assistance, feel free to contact the author [Hannibal Paul](https://hannibalpaul.com/).

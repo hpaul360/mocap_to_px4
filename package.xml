@@ -8,10 +8,8 @@
   <license>MIT License</license>
 
   <exec_depend>rclpy</exec_depend>
-  <exec_depend>std_msgs</exec_depend>
-
-  <depend>mocap_interfaces</depend>
-  <depend>px4_msgs</depend>
+  <exec_depend>mocap_interfaces</exec_depend>
+  <exec_depend>px4_msgs</exec_depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>

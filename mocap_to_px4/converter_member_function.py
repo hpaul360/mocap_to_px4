@@ -91,7 +91,6 @@ def main(args=None):
     rclpy.spin(mocap2px4)
 
     mocap2px4.destroy_node()
-
     rclpy.shutdown()
 
 if __name__ == '__main__':

@@ -28,11 +28,19 @@ The Mocap to PX4 ROS2 package is designed to bridge motion capture (MOCAP) data 
 
 ## Usage
 1. Ensure your PX4 flight controller is configured to receive odometry data.
-2. Launch the `mocap_to_px4` node:
+2. Launch the `mocap_to_px4` converter node only:
 
     ```bash
     # if body_id argument is not passed, the default body_id=1 is used
     ros2 launch mocap_to_px4 converter_launch.py body_id:=5
+    ```
+
+    OR 
+    
+    Launch the `mocap_to_px4` with `mocap_client` (Requires [mocap_ros2 package](https://github.com/hpaul360/mocap_ros2.git)):
+    ```bash
+    # if body_id argument is not passed, the default body_id=1 is used
+    ros2 launch mocap_to_px4 mocap_launch.py body_id:=5
     ```
 
 3. The node will subscribe to MOCAP data, transform it, and publish odometry data to PX4.

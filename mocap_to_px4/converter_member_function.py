@@ -33,9 +33,22 @@ class MocapToPx4(Node):
 
     def __init__(self):
         super().__init__('mocap_2_px4')
+
+        # Load parameters from the YAML file
+        self.declare_parameters(
+            namespace='',
+            parameters=[
+                ('body_id', 1),
+            ])
+
+        # Retrieve parameters
+        self.body_id = self.get_parameter('body_id').value
+
+        # Debug print to verify parameter value
+        self.get_logger().info(f"Tracking object for PX4 with body ID: {self.body_id}")
         
         # Set the ID of the body to subscribe from MOCAP and publish to PX4
-        self.body_id = 6
+        #self.body_id = 6
 
         # Publishers and Subscribers
         self.odom_pub = self.create_publisher(VehicleOdometry, '/fmu/in/vehicle_visual_odometry', 10)
